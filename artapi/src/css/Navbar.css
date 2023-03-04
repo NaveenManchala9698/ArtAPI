@@ -1,0 +1,41 @@
+.nav {
+  justify-content: space-between;
+  background: rgba(31, 31, 31, 0.4);
+  border: 1px solid #ca35f7;
+  border-radius: 53px;
+  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.16);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 32px;
+  margin: 16px;
+}
+
+.logo {
+  /* position: absolute; */
+  left: 48px;
+  top: 48px;
+}
+
+.site-title {
+  color: #aeaeb2;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  display: flex;
+  align-items: center;
+  width: 103px;
+  height: 48px;
+}
+
+.nav-right {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  width: 626px;
+  height: 48px;
+}
