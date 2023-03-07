@@ -1,42 +1,12 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+
 import { Link } from "react-router-dom";
-import "../css/SingleArt.css";
 import Pagination from "./Pagination";
 
-const SingleArt = () => {
-  const [art, setArt] = useState([]);
-
-  const [loading, setloading] = useState(false);
+const SearchResults = ({ art }) => {
   const [currentpage, setCurrentPage] = useState(1);
   const [artPerPage, setArtPerPage] = useState(9);
-
-  useEffect(() => {
-    fetchArt();
-  }, []);
-
-  //GET
-  const fetchArt = async () => {
-    setloading(true);
-    try {
-      const response = await fetch(
-        "https://www.rijksmuseum.nl/api/en/collection?key=2esrTh6M&ps=100"
-      );
-
-      if (response.ok) {
-        const art = await response.json();
-        const result = { art };
-        const data = result.art;
-        console.log(data.artObjects);
-        setArt(data.artObjects);
-        setloading(false);
-      } else {
-        console.log("ERROR");
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   // GET CURRENT POSTS
   const indexOfLastArt = currentpage * artPerPage;
@@ -46,13 +16,35 @@ const SingleArt = () => {
   //CHANGE PAGE
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  //GET
+  /* const fetchSearchedArt = async (query) => {
+    try {
+      const response = await fetch(
+        `https://www.rijksmuseum.nl/api/en/collection?key=2esrTh6M&ps=100&type=${query}`
+      );
+
+      if (response.ok) {
+        const art = await response.json();
+        const result = { art };
+        const data = result.art;
+        console.log(data.artObjects);
+        setSearchResults(data.artObjects);
+        setIsLoading(false);
+      } else {
+        console.log("ERROR");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }; */
+
   return (
     <>
       <Container className="container mx-auto mt-5">
         <Row>
-          <div className="col-12 text-center ">
+          {/* <div className="col-12 text-center ">
             <h1 className="mb-5 all-artwork">ALL Artworks</h1>
-          </div>
+          </div> */}
           {currentArt &&
             currentArt.map((eachArt) => (
               <Col key={eachArt.id} xs={12} sm={6} md={4}>
@@ -86,4 +78,4 @@ const SingleArt = () => {
   );
 };
 
-export default SingleArt;
+export default SearchResults;

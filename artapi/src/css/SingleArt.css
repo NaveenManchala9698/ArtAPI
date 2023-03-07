@@ -1,7 +1,16 @@
 .image {
-  width: 400px;
+  width: 450px;
   height: 364px;
+  object-fit: cover;
+  position: relative;
+}
+
+.image:hover {
   box-shadow: 0px 16px 16px 4px rgba(0, 0, 0, 0.12);
+}
+
+.container {
+  max-width: 100%;
 }
 
 .all-artwork {
@@ -11,10 +20,52 @@
   align-items: center;
 }
 
-.arts {
+.image-maker-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 4px 8px;
+  /* gap: 10px; */
+  position: absolute;
+  width: 152px;
+  height: 24px;
+  right: 28px;
+  top: 0px;
+  background: rgba(42, 42, 42, 0.5);
+  border-radius: 0px 8px;
+  z-index: 3;
 }
 
 .image-maker {
-  position: absolute;
+  width: 136px;
+  height: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
   color: #0feffd;
+  z-index: 2;
+}
+
+.image-text {
+  position: absolute;
+  height: 132px;
+  left: 48px;
+  right: 80px;
+  bottom: 40px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  display: flex;
+  align-items: flex-end;
+  color: #f8f6f6;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 992px) {
 }
