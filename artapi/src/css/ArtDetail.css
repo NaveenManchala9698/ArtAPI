@@ -69,3 +69,28 @@
   font-size: 24px;
   line-height: 32px;
 }
+
+@media screen and (max-width: 600px) {
+  .card-text {
+    font-size: 30px;
+  }
+  .card-body p {
+    font-size: 14px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .card-text {
+    font-size: 40px;
+  }
+  .card-body p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .card-body p {
+    font-size: 18px;
+  }
+}

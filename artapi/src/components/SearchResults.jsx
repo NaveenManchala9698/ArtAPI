@@ -42,9 +42,9 @@ const SearchResults = ({ art }) => {
     <>
       <Container className="container mx-auto mt-5">
         <Row>
-          {/* <div className="col-12 text-center ">
-            <h1 className="mb-5 all-artwork">ALL Artworks</h1>
-          </div> */}
+          <div className="col-12 text-center ">
+            <h1 className="mb-5 all-artwork">Results</h1>
+          </div>
           {currentArt &&
             currentArt.map((eachArt) => (
               <Col key={eachArt.id} xs={12} sm={6} md={4}>

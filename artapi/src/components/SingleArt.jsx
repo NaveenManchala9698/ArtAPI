@@ -55,23 +55,27 @@ const SingleArt = () => {
           </div>
           {currentArt &&
             currentArt.map((eachArt) => (
-              <Col key={eachArt.id} xs={12} sm={6} md={4}>
-                <div className="image-container">
-                  <div className="image-maker-container">
-                    <div className="image-maker">
-                      {eachArt.principalOrFirstMaker}
-                    </div>
+              <Col
+                key={eachArt.id}
+                xs={12}
+                sm={6}
+                md={4}
+                className="image-container"
+              >
+                <div className="image-maker-container">
+                  <div className="image-maker">
+                    {eachArt.principalOrFirstMaker}
                   </div>
-                  <div>
-                    <Link to={`art/${eachArt.objectNumber}`}>
-                      <img
-                        src={eachArt.webImage.url}
-                        className="image mb-3"
-                        alt=""
-                      />
-                    </Link>
-                    <div className="image-text">{eachArt.title}</div>
-                  </div>
+                </div>
+                <div>
+                  <Link to={`art/${eachArt.objectNumber}`}>
+                    <img
+                      src={eachArt.webImage.url}
+                      className="image mb-5"
+                      alt=""
+                    />
+                  </Link>
+                  <div className="image-text">{eachArt.title}</div>
                 </div>
               </Col>
             ))}

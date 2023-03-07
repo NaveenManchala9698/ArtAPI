@@ -1,8 +1,18 @@
 .image {
-  width: 450px;
-  height: 364px;
   object-fit: cover;
+
+  border-radius: 8px;
+  width: 450px;
+  /* height: 364px; */
+}
+
+.image-container {
   position: relative;
+  height: 364px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  right: 0;
+  padding: 15px;
 }
 
 .image:hover {
@@ -21,16 +31,10 @@
 }
 
 .image-maker-container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 4px 8px;
-  /* gap: 10px; */
   position: absolute;
-  width: 152px;
-  height: 24px;
-  right: 28px;
-  top: 0px;
+  right: 26px;
+  top: 15px;
+  padding: 4px 8px;
   background: rgba(42, 42, 42, 0.5);
   border-radius: 0px 8px;
   z-index: 3;
@@ -62,10 +66,25 @@
 }
 
 @media screen and (max-width: 600px) {
+  .image {
+    width: 450px;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .image {
+    width: 280px;
+  }
+  /* .image-maker-container {
+    right: 0;
+  } */
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) and (min-width: 768px) {
+  .image {
+    width: 300px;
+  }
+  .image-maker-container {
+    right: 0;
+  }
 }
