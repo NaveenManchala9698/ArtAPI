@@ -2,9 +2,9 @@
 
 This is a project that shows different artworks and specific details of the Art.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+In this Project, you can view various famous artworks in the main page. The artwork displays the artist name and a small description about the art.Yo cans earch for specific category of art (e.g. painting) in the search field. You van view more details about the work by clicking on the art. A detailed page about the art opens up.
 
 ### `npm start`
 
