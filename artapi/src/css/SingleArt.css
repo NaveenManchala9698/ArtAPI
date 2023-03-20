@@ -1,7 +1,7 @@
 .image {
   object-fit: cover;
 
-  border-radius: 8px;
+  border-radius: 12px;
   width: 450px;
   /* height: 364px; */
 }
